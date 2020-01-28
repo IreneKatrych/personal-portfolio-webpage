@@ -1,9 +1,8 @@
 /*
-User Story #9: My portfolio should have at least one media query.
-User Story #10: The height of the welcome section should be equal to the height of the viewport.
-User Story #11: The navbar should always be at the top of the viewport.
+This is CSS for Personal portfolio page 
 */
 
+/* Import font */
 @import url('https://fonts.googleapis.com/css?family=Kanit|Sedgwick+Ave+Display&display=swap');
 
 body{
@@ -11,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    width: 100%;
+    width: 100vw;
     background-color: #EEE2DC;
     font-family: 'Kanit', sans-serif;
     color: #123C69;
@@ -25,23 +24,26 @@ body{
     flex-direction: row;
     justify-content: flex-end;
     align-self: center;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 3em;
     position: fixed;
     top: 0px;
     left: 0px;
-    padding: 10px 20px 10px 20px;
     background-color: #EDC7B7;
     z-index: 1;
 }
 
 .nav-link{
-    padding: 0px 5px 0px 5px;
-    margin-right: 25px;
+    padding: 0px 15px 0px 5px;
     font-size: 30px;
     color: #AC3B61;
     text-decoration: none;
     font-family: 'Sedgwick Ave Display', cursive;
+    align-self: center;
+}
+
+#Contacts{
+    padding-right: 25px;
 }
 
 .nav-link:hover{
@@ -97,6 +99,17 @@ h1{
 
     #welcome-section p{
         font-size: 20px;
+    }
+}
+
+@media(max-width: 480px){
+    h1{
+        font-size: 60px;
+        margin: 50px 20px 20px 10px;
+    }
+
+    #welcome-section p{
+        font-size: 25px;
     }
 }
 
@@ -178,6 +191,14 @@ h1{
     }
 }
 
+@media(max-width: 480px){
+    .projects-screens{
+        max-width: 350px;
+        display: block;
+        height: auto;
+    }
+}
+
 #contacts{
     padding: 10px 40px 10px 40px;
     display: flex;
@@ -228,7 +249,7 @@ footer{
     bottom: 0px;
     right: 0px;
     width: 100vw;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 0px 10px 0px;
     color: #AC3B61;
     background-color: #EDC7B7;
     text-align: center;
